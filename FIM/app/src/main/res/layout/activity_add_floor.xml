@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="139dp"
+    android:fadeScrollbars="false"
+    android:background="#D2B48C"
+    tools:layout_editor_absoluteY="270dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D2B48C"
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="104dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="4dp"
+            android:text="Log Out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.948"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/addFloor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:text="Add Floor"
+            android:textColor="@color/black"
+            android:textSize="45dp"
+            app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_view_all"
+            android:layout_width="104dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:text="View All"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoutBtn"
+            tools:text="View All" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="Category"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addFloor" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="137dp">
+
+            <RadioButton
+                android:id="@+id/laminate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laminate"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/stone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stone"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/wood"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:text="Wood"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/vinyl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vinyl"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tile"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Type"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupCategory"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="602dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="291dp">
+
+            <RadioButton
+                android:id="@+id/engineered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engineered"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/bamboo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bamboo"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/solid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solid"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/porcelain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porcelain"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/ceramic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ceramic"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/resin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resin"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/marble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marble"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/pebble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pebble"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/slate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slate"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/regularLaminate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular laminate"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/waterResistant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water resistant"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/waterProof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waterproof"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/species"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Species"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupType"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="602dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/species">
+
+            <RadioButton
+                android:id="@+id/oak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oak"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/hickory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hickory"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/maple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maple"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/notApplicable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Applicable"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Color"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupSpecies"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="602dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="326dp">
+
+            <RadioButton
+                android:id="@+id/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Black"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="White"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gray"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brown"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Brand"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupColor"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="495dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brand">
+
+            <RadioButton
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dream Home"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Armstrong"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mohawk"
+                android:textSize="25dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            android:text="Price"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/floor_size"
+            />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            android:text="Quantity"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/floor_price" />
+
+        <EditText
+            android:id="@+id/floor_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:ems="5"
+            android:hint="Floor Price"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <EditText
+            android:id="@+id/floor_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:ems="5"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            android:text="Size"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupBrand" />
+
+        <EditText
+            android:id="@+id/floor_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:ems="5"
+            android:hint="Floor Size"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/size" />
+
+        <TextView
+            android:id="@+id/storeID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            android:text="Store ID"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/floor_quantity" />
+
+        <EditText
+            android:id="@+id/store_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:ems="5"
+            android:hint="Store ID"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/storeID" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="101dp"
+            android:layout_height="60dp"
+            android:text="Add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/store_ID" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

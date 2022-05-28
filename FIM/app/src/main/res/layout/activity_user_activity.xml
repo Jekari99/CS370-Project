@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2B48C"
+    tools:context="edu.qc.seclass.fim.UserActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:text="User Logged in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/floorIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/border_image"
+        android:cropToPadding="true"
+        android:gravity="center"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/searchInstruction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_floor_image_foreground" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_view_all2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View All"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutBtn"
+        tools:text="View All" />
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:hint="Search By Name"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction2"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginRight="10dp"
+        android:text="Search"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@+id/searchBox"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Search" />
+
+    <TextView
+        android:id="@+id/searchInstruction"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginRight="15dp"
+        android:text="Select Floor category and type to look for a specific floor"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_all2" />
+
+    <TextView
+        android:id="@+id/searchInstruction2"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="15dp"
+        android:text="Type the floor name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType" />
+
+    <TextView
+        android:id="@+id/floorSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="288dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:gravity="center_vertical"
+        android:hint="Search Floor Category"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/floorSpinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:gravity="center_vertical"
+        android:hint="Search Floor Type"
+        android:padding="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/floorSpinner"
+        app:layout_constraintVertical_bias="0.027" />
+<!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="242dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="84dp"
+        android:maxHeight="500dp"
+        android:maxWidth="500dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/border_image"
+        android:cropToPadding="true"
+        android:gravity="center"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/floor" />
+-->
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:maxWidth="100px"
+        android:maxHeight="100px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType"
+        app:layout_constraintVertical_bias="0.956"
+        app:srcCompat="@drawable/fim" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

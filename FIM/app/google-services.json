@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "452981227546",
+    "project_id": "fimcsci370",
+    "storage_bucket": "fimcsci370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452981227546:android:23f33759fddd354bbf51a3",
+        "android_client_info": {
+          "package_name": "edu.qc.seclass.fim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452981227546-talrh73ur791p6bi90mtb73li98gpkto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjnnwsSnp2gKByV06nocO_HLlsA6MQTNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452981227546-talrh73ur791p6bi90mtb73li98gpkto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

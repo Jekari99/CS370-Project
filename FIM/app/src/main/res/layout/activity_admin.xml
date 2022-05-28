@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2B48C"
+    tools:context="edu.qc.seclass.fim.Admin">
+
+    <TextView
+        android:id="@+id/admin_logged_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Admin Logged in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_view_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View All"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutBtn"
+        tools:text="View All" />
+
+    <ImageView
+        android:id="@+id/floorIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/border_image"
+        android:cropToPadding="true"
+        android:gravity="center"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/searchInstruction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_logged_in"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_floor_image_foreground" />
+
+    <TextView
+        android:id="@+id/searchInstruction"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginRight="15dp"
+        android:text="Select Floor category and type to look for a specific floor"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_all" />
+
+    <TextView
+        android:id="@+id/floorSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="288dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:gravity="center_vertical"
+        android:hint="Search Floor Category"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/floorSpinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:gravity="center_vertical"
+        android:hint="Search Floor Type"
+        android:padding="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/floorSpinner"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/searchInstruction2"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="15dp"
+        android:text="Type the floor name"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType" />
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:hint="Search By Name"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction2"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginRight="10dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@+id/searchBox"
+        app:layout_constraintTop_toBottomOf="@+id/searchInstruction2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Search" />
+
+    <Button
+        android:id="@+id/button_add"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_btn_image"
+        app:icon="@drawable/ic_action_add"
+        app:iconSize="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <Button
+        android:id="@+id/button_delete"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_btn_image"
+        app:icon="@drawable/ic_action_delete"
+        app:iconSize="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/button_edit"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/ic_btn_image"
+        app:icon="@drawable/ic_action_edit"
+        app:iconSize= "55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button_delete"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.506"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType" />
+<!--
+    <ImageView
+        android:id="@+id/tileFloor"
+        android:layout_width="195dp"
+        android:layout_height="259dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/border_image"
+        android:cropToPadding="true"
+        android:gravity="center"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpinnerType"
+        app:srcCompat="@drawable/tilefloor" />
+-->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:maxWidth="100px"
+        android:maxHeight="100px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_delete"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/fim" />
+
+    <!--
+    <EditText
+        android:id="@+id/floor_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Category"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floor_id" />
+
+    <EditText
+        android:id="@+id/floorType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Type"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floor_category" />
+
+    <EditText
+        android:id="@+id/floorColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Color"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floor_price" />
+
+    <EditText
+        android:id="@+id/floorSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Size"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorColor" />
+
+    <EditText
+        android:id="@+id/floorBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="7"
+        android:hint="Floor Brand"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/floor_category"
+        app:layout_constraintTop_toBottomOf="@+id/logoutBtn" />
+
+    <EditText
+        android:id="@+id/floorMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Material"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/floor_category"
+        app:layout_constraintTop_toBottomOf="@+id/floorBrand" />
+
+    <EditText
+        android:id="@+id/floorSpecies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Floor Species"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/floor_category"
+        app:layout_constraintTop_toBottomOf="@+id/floorMaterial" />
+
+    <EditText
+        android:id="@+id/floorWaterProof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Water Proof"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/floor_category"
+        app:layout_constraintTop_toBottomOf="@+id/floorSpecies" />
+
+    <EditText
+        android:id="@+id/floorWaterResistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="7"
+        android:hint="Water Resistant"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toEndOf="@+id/floor_category"
+        app:layout_constraintTop_toBottomOf="@+id/floorWaterProof" />
+
+    <EditText
+        android:id="@+id/floor_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:hint="Floor ID"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin_logged_in" />
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="32dp"
+        android:ems="5"
+        android:hint="Search"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/floor_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:ems="5"
+        android:hint="Floor Price"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorType" />
+-->
+    <!--
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="52dp"
+        android:text="Add"
+        app:layout_constraintEnd_toStartOf="@+id/button_delete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorSize" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_all"
+        tools:text="Search" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="52dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toStartOf="@+id/button_update"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toBottomOf="@+id/floorSize" />
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="52dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_delete"
+        app:layout_constraintTop_toBottomOf="@+id/floorSize" />
+    -->
+
+    <!--app:layout_constraintEnd_toStartOf="@+id/lv_inventoryList"-->
+    <!--
+    <ListView
+        android:id="@+id/lv_inventoryList"
+        android:layout_width="230dp"
+        android:layout_height="528dp"
+        android:layout_marginEnd="16dp"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_update"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379" />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

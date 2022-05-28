@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D2B48C"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_view_all"
+        android:layout_width="104dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:text="View All"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutBtn"
+        tools:text="View All" />
+
+
+    <TextView
+        android:id="@+id/deleteFloor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:text="Delete Floor"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deleteInstruction"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="15dp"
+        android:text="Type the floor id to delete floor"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_view_all" />
+
+    <EditText
+        android:id="@+id/floor_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:ems="5"
+        android:hint="Floor ID"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteInstruction" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteInstruction"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@+id/floor_id"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:maxWidth="100px"
+        android:maxHeight="100px"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteBtn"
+        app:layout_constraintVertical_bias="0.955"
+        app:srcCompat="@drawable/fim" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
